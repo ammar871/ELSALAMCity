@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ELSALAM City</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="default_notification_channel_id">chanal</string>
+</resources>

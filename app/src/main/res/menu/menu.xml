@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="الرئيسية" />
+    <item
+        android:id="@+id/searsh"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="البحث" />
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/ic_news24"
+        android:title="الاخبار" />
+    <item
+        android:id="@+id/call_us"
+        android:icon="@drawable/ic_baseline_contact_support_24"
+        android:title="تواصل معنا" />
+    <item
+        android:id="@+id/about_app"
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="عن التطبيق" />
+    <item
+        android:id="@+id/share_nav"
+        android:icon="@drawable/ic_share_24"
+        android:title="دعوة صديق" />
+
+
+</menu>
