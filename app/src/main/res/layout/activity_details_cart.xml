@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".detailes.DetailActivity">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/adView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_Detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:scaleType="fitXY"
+                    android:src="@color/red" />
+
+                <TextView
+                    android:id="@+id/name_detailes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_Detail"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#DBDBDB"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/homefont"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/menucolor"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/lprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_detailes">
+
+                    <TextView
+                        android:id="@+id/tv_name_market"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/homefont"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_proce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="@null"
+                        android:elevation="20dp"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/red"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lcart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lprice"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="10sp"
+                    app:cardElevation="10dp">
+
+                    <TextView
+                        android:id="@+id/desc_detail"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/homefont"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textSize="18dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lcart"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/homefont"
+                    android:text="تواصل مع البائع "
+                    android:textColor="@color/menucolor"
+                    android:textSize="@dimen/_15sdp" />
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/addpro"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="50dp"-->
+                <!--                    android:layout_below="@id/lcart"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_marginLeft="20dp"-->
+                <!--                    android:layout_marginTop="10sp"-->
+                <!--                    android:layout_marginRight="20dp"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:weightSum="3">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tv_plus"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_margin="5dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/draw_btn2"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="+"-->
+                <!--                        android:textColor="@color/colorPrimary"-->
+                <!--                        android:textSize="30dp"-->
+                <!--                        android:textStyle="bold" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tv_quntity"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_margin="5dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@color/menucolor"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="1"-->
+                <!--                        android:textColor="@color/white"-->
+
+                <!--                        android:textSize="30dp" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tv_minus"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_margin="5dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/draw_btn2"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="-"-->
+                <!--                        android:textColor="@color/colorPrimary"-->
+                <!--                        android:textSize="30dp"-->
+                <!--                        android:textStyle="bold" />-->
+
+                <!--                </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/tv_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_call"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:drawableLeft="@drawable/ic_islicke"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/homefont"
+                    android:text="0"
+                    android:textColor="@color/menucolor"
+                    android:textSize="@dimen/_18ssp" />
+
+                <com.andremion.counterfab.CounterFab
+                    android:id="@+id/fabcont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_call"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_5sdp"
+                    app:backgroundTint="@color/white"
+                    app:badgeBackgroundColor="@color/red"
+                    app:badgePosition="RightTop"
+                    app:badgeTextColor="@color/white"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+
+                <LinearLayout
+                    android:id="@+id/layout_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_call"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_5sdp"
+                        app:backgroundTint="@color/menucolor"
+
+
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/call_green" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCallwahts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_5sdp"
+                        app:backgroundTint="@color/menucolor"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/whatsapp" />
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rateProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_call"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                   >
+
+                    <TextView
+                        app:layout_constraintWidth_percent="0.25"
+                        android:id="@+id/tv_location"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_design_back"
+                        android:drawableTop="@drawable/ic_baseline_location__24"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:fontFamily="@font/homefont"
+                        android:gravity="center"
+                        android:text="موقع المحل "
+                        android:textColor="@color/menucolor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        app:layout_constraintWidth_percent="0.25"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_location"
+                        android:id="@+id/lay_fab"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_design_back"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/img_star"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/homefont"
+                            android:gravity="center"
+                            android:text="المفضلــة"
+                            android:textColor="@color/menucolor"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        app:layout_constraintWidth_percent="0.25"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_location"
+                        android:id="@+id/lay_isfab"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_design_back"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_isfab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_star"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/homefont"
+                            android:text="المفضلــة"
+
+                            android:textColor="@color/menucolor"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <TextView
+                        app:layout_constraintWidth_percent="0.25"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/lay_fab"
+                        android:id="@+id/tv_Share"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_design_back"
+                        android:drawableTop="@drawable/ic_share_24"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:fontFamily="@font/homefont"
+                        android:gravity="center"
+                        android:text="مشاركة المنتج"
+                        android:textColor="@color/menucolor"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        app:layout_constraintWidth_percent="0.25"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_Share"
+                        android:id="@+id/lay_like"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_design_back"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_thumbs_up" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/img_star"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/homefont"
+                            android:gravity="center"
+                            android:text="اعجـاب"
+                            android:textColor="@color/menucolor"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        app:layout_constraintWidth_percent="0.25"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_Share"
+                        android:id="@+id/lay_islike"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_design_back"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_islike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_islicke" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/img_star"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/homefont"
+                            android:gravity="center"
+                            android:text="اعجـاب"
+                            android:textColor="@color/menucolor"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/layout_delivary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rateProduct"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/tv_calldelevary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/fabdelivaryhome"
+                        android:fontFamily="@font/homefont"
+                        android:text="اطلب من الدليفرى"
+                        android:textColor="@color/menucolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabdelivaryhome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_5sdp"
+
+                        app:backgroundTint="@color/menucolor"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/call_24" />
+
+                    <LinearLayout
+
+                        android:id="@+id/linerbuttun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toLeftOf="@id/fabdelivaryhome"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/fabCalldelavary"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:contentDescription="@string/app_name"
+
+                            android:visibility="gone"
+
+
+                            app:srcCompat="@drawable/call_green" />
+
+                        <ImageView
+                            android:id="@+id/fabCallwahtsdelevary"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:contentDescription="@string/app_name"
+
+                            android:visibility="gone"
+
+
+                            app:srcCompat="@drawable/whatsapp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3315263708203388/4286849317">
+
+        </com.google.android.gms.ads.AdView>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,5 +1,32 @@
 <resources>
-    <string name="app_name">ELSALAM City</string>
+    <string name="app_name">BARDIS City</string>
     <string name="title_activity_maps">Map</string>
     <string name="default_notification_channel_id">chanal</string>
+
+    <string-array name="shopping_options">
+        <item>SHOPPING OPTIONS</item>
+    </string-array>
+
+    <!--    <string name="name">chanal_own</string>
+    <string name="default_notification_channel_id">chanal</string>-->
+
+    <string name="facebook_app_id">4036073323071548</string>
+    <string name="fb_login_protocol_scheme">fb4036073323071548</string>
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18dp</item>
+        <item name="android:fontFamily">@font/homefont</item>
+
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="slide_1_title">Welcome to Javatpoint!</string>
+    <string name="slide_1_desc">أول تطبيق لخدمة اهالي مدينة السلام والنهضة وشارع جمال عبد الناصر…
+        اكثر من 500 نشاط تجاري وخدمة تستطيع الوصول اليه فقط بضغطة زر…
+        السلام سيتي ابليكشن.. حياتك اسهل</string>
+
+    <string name="slide_2_title">Android</string>
+    <string name="slide_2_desc">Android is a mobile operating system developed by Google.</string>
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:scaleType="fitXY"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_horizontal"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textStyle="bold"
+
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:text="أول تطبيق لخدمة اهالي مدينة السلام والنهضة وشارع جمال عبد الناصر...\nاكثر من 500 نشاط تجاري \nوخدمة تستطيع الوصول اليه فقط بضغطة زر...\nالسلام سيتي ابليكشن.. حياتك اسهل "
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -6,98 +6,120 @@
     <data>
 
     </data>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/appbar"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginBottom="4dp"
-            android:background="@color/white"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:background="@drawable/btn_design_back"
-                android:id="@+id/imagbackd"
-                android:padding="15dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
-            <TextView
-                android:background="@drawable/btn_design_back"
-                android:text="آخر الأخبار"
-               android:textSize="20dp"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
-            <View
+            android:layout_above="@id/adView"
+            android:layout_height="match_parent">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_alignParentBottom="true"
-                android:background="#B5292827"
-                tools:ignore="MissingConstraints" />
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
 
-        </RelativeLayout>
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:scaleType="fitXY"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                <RelativeLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-        <LinearLayout
+                    <ImageView
+                        android:background="@drawable/btn_design_back"
+                        android:id="@+id/imagbackd"
+                        android:padding="15dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+                    <TextView
+                        android:background="@drawable/btn_design_back"
+                        android:text="آخر الأخبار"
+                        android:textSize="20dp"
+                        android:textColor="@color/menucolor"
+                        android:fontFamily="@font/homefont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#B5292827"
+                        tools:ignore="MissingConstraints" />
+
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="6dp"
+                    android:gravity="right"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/colorPrimary"
+
+                        android:textSize="20dp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageView"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:layout_marginRight="6dp"
-            android:gravity="right"
+            android:layout_alignParentBottom="true"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintRight_toRightOf="parent"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1660693716077788/8134060213">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
 
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name Catogray"
-                android:textColor="@color/colorPrimary"
-
-                android:textSize="20dp"
-
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Name Catogray"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-</ScrollView>
 
 </layout>

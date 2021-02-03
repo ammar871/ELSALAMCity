@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menucolor"
+        tools:context=".auth.MainActivity">
+
+
+
+
+
+
+
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            >
+
+            <EditText
+
+                android:id="@+id/editTextMobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableRight="@drawable/call_24"
+                android:drawablePadding="10dp"
+                android:gravity="center|start"
+                android:hint="رقم الهاتف"
+                android:fontFamily="@font/homefont"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+                android:textColor="@color/menucolor" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+            <!--   android:drawableLeft="@drawable/ic_person_black_24dp"-->
+
+            <EditText
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_baseline_person_24"
+                android:fontFamily="@font/homefont"
+                android:drawablePadding="10dp"
+                android:gravity="center|start"
+                android:hint="عنوانى"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/menucolor" />
+        </androidx.cardview.widget.CardView>
+
+
+
+        <LinearLayout
+
+            android:layout_marginRight="30sp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/tv_text"
+            android:layout_marginTop="20dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rvFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#395898">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/baseline_facebook_24"
+                    android:drawablePadding="8dp"
+
+                    android:text="Facebook"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rvGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#FFFDFE">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_google"
+                    android:drawablePadding="8dp"
+
+                    android:text="Google"
+                    android:textColor="#757575"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:src="@drawable/logo"
+            android:scaleType="fitXY"
+            />
+    </LinearLayout>
+</ScrollView>
+
+
+    </RelativeLayout>
+</layout>

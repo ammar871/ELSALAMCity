@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/card_item_v"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/card_item_v"
+            android:gravity="right"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cart_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name Catogray"
+                android:textColor="@color/menucolor"
+                android:fontFamily="@font/homefont"
+                android:textSize="18dp"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_descp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Name Catogray"
+                android:textColor="@color/black"
+                android:fontFamily="@font/homefont"
+                android:textSize="15dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                >
+                <TextView
+                    android:id="@+id/cart_item_price"
+                    android:textColor="#FA0707"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textStyle="italic"
+                    android:text="2906"/>
+                <TextView
+                    android:id="@+id/item_Nmarket"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="2906"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/card_item_delet"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_margin="@dimen/_15ssp"
+              android:layout_alignParentLeft="true"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="2dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10sp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cart_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|start"
+                android:fontFamily="@font/homefont"
+                android:textColor="@color/menucolor"
+                android:padding="5dp"
+                android:text="Food 01"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cart_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|start"
+                android:padding="5dp"
+                android:fontFamily="@font/homefont"
+                android:text="100,00"
+                android:textAllCaps="true"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/card_item_count"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|end"
+
+            android:layout_marginRight="16dp" />
+
+        <ImageView
+            android:id="@+id/card_item_delet"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|end"
+
+
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>-->

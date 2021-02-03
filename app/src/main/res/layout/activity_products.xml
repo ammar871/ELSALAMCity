@@ -7,7 +7,7 @@
 
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -30,7 +30,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
 
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
             <TextView
                 android:id="@+id/tv_title"
@@ -41,9 +41,11 @@
                 android:layout_marginLeft="8dp"
 
                 android:layout_marginRight="8dp"
-                android:text="متجر الصعيد"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+
+                android:fontFamily="@font/homefont"
+                android:textColor="@color/menucolor"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp" />
 
 
             <View
@@ -58,12 +60,23 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_product"
+            android:layout_below="@id/appbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="15dp">
+            android:layout_above="@id/adView"
+         android:layout_marginBottom="5dp">
 
         </androidx.recyclerview.widget.RecyclerView>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3315263708203388/4303995334">
+        </com.google.android.gms.ads.AdView>
 
-    </LinearLayout>
+    </RelativeLayout>
 </layout>

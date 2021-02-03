@@ -7,7 +7,7 @@
 
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -56,10 +56,24 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_Searsh"
+            android:layout_below="@id/appbar"
+            android:layout_above="@id/adView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
             android:scrollbars="vertical" />
-
-    </LinearLayout>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintRight_toRightOf="parent"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1660693716077788/8134060213">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
 </layout>

@@ -15,6 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_above="@id/adView"
             android:orientation="vertical">
 
 
@@ -28,6 +29,8 @@
         android:gravity="center"
         android:layout_centerVertical="true"
         android:text="الأخبار"
+        android:textColor="@color/menucolor"
+        android:fontFamily="@font/homefont"
         android:textSize="20dp"
         />
 
@@ -39,21 +42,65 @@
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#B5292827"
+        tools:ignore="MissingConstraints" />
 </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/liner_netWork"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/appbar"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10sp"
+                        app:srcCompat="@drawable/ic_baseline_wifi_off_24"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="لا يوجد اتصال بالانترنت "
+                        android:textColor="#A9000000"
+                        android:textSize="30dp"/>
+                </LinearLayout>
 
+            </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp"
+
                 android:id="@+id/rc_list">
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
 
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
 
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3315263708203388/8737230212">
+
+        </com.google.android.gms.ads.AdView>
     </RelativeLayout>
 </layout>

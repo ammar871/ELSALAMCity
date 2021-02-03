@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.elsalmcity.elsalamcity">
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the "MyLocation" functionality.
-    -->
+    package="com.bardisammar.elsalamcity">
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -17,24 +14,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".authNumber.ValidatNumberActivity"></activity>
+        <activity android:name=".authNumber.LoginNumberActivity" />
+        <activity android:name=".cart.ShowNotyCartActivity">
+            <intent-filter>
+                <action android:name="com.bardisammar.elsalamcity.notifecation_PROUDACT_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".cart.OffersActivity" />
+        <activity android:name=".cart.CartActivity" />
+        <activity android:name=".cart.DetailsCartActivity" />
+        <activity android:name=".auth.RegesterActivity" />
+        <activity android:name=".auth.LoginActivity" />
+        <activity android:name=".servace.WelcomeActivity" />
+        <activity android:name=".news.DetailsNewsActivity" />
+        <activity android:name=".details.ShowFullScreenActivity" />
         <activity android:name=".news.ShowNewsActivity">
             <intent-filter>
-                <action android:name="com.com.elsalmcity.elsalamcity.notifecation_NEWS_NOTIFICATION">
+                <action android:name="com.bardisammar.elsalamcity.notifecation_NEWS_NOTIFICATION" />
 
-                </action>
-
-                <category android:name="android.intent.category.DEFAULT">
-                    
-                </category>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".news.NewsActivity">
-
-        </activity>
+        <activity android:name=".news.NewsActivity" />
         <activity android:name=".notifecation.ShowNotiyActivity">
             <intent-filter>
-                <action android:name="com.com.elsalmcity.elsalamcity.notifecation_TARGET_NOTIFICATION"></action>
+                <action android:name="com.bardisammar.elsalamcity.notifecation_TARGET_NOTIFICATION" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -55,9 +62,11 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".details.ShowImagsActivity" />
         <activity android:name=".products.ProductsActivity" />
-        <activity android:name=".catogry.CatograyActivity" />
         <activity android:name=".details.DetailsActivity" />
-        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".home.HomeActivity" >
+
+
+        </activity>
         <activity android:name=".spilash.SpilashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -79,7 +88,7 @@
             android:value="@string/default_notification_channel_id" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/logoonc" />
+            android:resource="@drawable/logo" />
         <!--
  Set color used with incoming notification messages. This is used when no color is set for the incoming
              notification message. See README(https://goo.gl/6BKBk7) for more.
@@ -87,6 +96,29 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3315263708203388~3405012481" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

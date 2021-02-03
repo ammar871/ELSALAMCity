@@ -29,7 +29,9 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:text="تواصل معنا"
-                android:textColor="@color/black"
+                android:fontFamily="@font/homefont"
+
+                android:textColor="@color/menucolor"
                 android:textSize="18dp" />
 
             <ImageView
@@ -42,7 +44,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
 
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
             <View
                 android:layout_width="match_parent"
@@ -67,106 +69,71 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="يمكنك التواصل معنا عن طريق الاتصال علي الهاتف او ارسال ايميل "
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/menucolor"
+                android:fontFamily="@font/homefont"
                 android:textSize="25dp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/_15ssp"
+                android:layout_gravity="center"
                 android:orientation="horizontal"
-                android:weightSum="4">
+               >
 
-                <RelativeLayout
 
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/liner_callWhats"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1.15"
-                    android:background="@drawable/corner_btn_draw">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:text="واتس اب "
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-
-                    android:layout_height="50dp"
-                    android:layout_weight="2.75">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:text="+201011629271"
-                        android:textColor="@color/black"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <RelativeLayout
-
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/liner_sendEmail"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1.15"
-                    android:background="@drawable/corner_btn_draw">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:text="ارسال ايميل "
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-
-                    android:layout_height="50dp"
-                    android:layout_weight="2.75">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textColor="@color/black"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/send_whats"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="واتس اب "
+                    android:layout_margin="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:src="@drawable/whatsapp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/send_face"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="واتس اب "
+                    android:layout_margin="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:srcCompat="@drawable/ic_facebook"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/send_Email"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="ارسال ايميل "
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:srcCompat="@drawable/ic_gmail"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </LinearLayout>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3315263708203388/7651379257">
+        </com.google.android.gms.ads.AdView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

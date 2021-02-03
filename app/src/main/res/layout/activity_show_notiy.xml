@@ -7,7 +7,7 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".details.DetailsActivity">
@@ -31,14 +31,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:textSize="20dp"
-                android:text="آحدث إعلان"/>
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
             <View
                 android:layout_width="match_parent"
@@ -48,12 +41,12 @@
                 tools:ignore="MissingConstraints" />
 
         </RelativeLayout>
-
-
-        <androidx.core.widget.NestedScrollView
+        <ScrollView
+            android:layout_below="@id/appbar"
+            android:layout_above="@id/adView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10sp"
             app:layout_constraintTop_toBottomOf="@id/appbar">
 
             <LinearLayout
@@ -74,17 +67,27 @@
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
                         android:id="@+id/imageView"
+
                         app:civ_border_width="2dp"
                         android:layout_alignParentRight="true"
                         app:civ_border_color="#FF000000"/>
+                    <!--    <ImageView
 
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="fitXY"
+                            tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
 
                     <LinearLayout
-                        android:layout_centerVertical="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:layout_marginRight="6dp"
+                        android:layout_centerVertical="true"
                         android:layout_toLeftOf="@id/imageView"
                         android:gravity="right"
                         android:orientation="vertical">
@@ -93,8 +96,8 @@
                             android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Name Catogray"
-                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/homefont"
+                            android:textColor="@color/menucolor"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -103,7 +106,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Name Catogray"
+                            android:fontFamily="@font/homefont"
                             android:textColor="@color/black"
                             android:textSize="18dp" />
 
@@ -121,7 +124,7 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp"
-                    android:text="address"
+
                     android:textSize="18dp" />
                 <TextView
                     android:drawablePadding="5dp"
@@ -129,32 +132,16 @@
                     android:layout_width="wrap_content"
                     android:drawableRight="@drawable/ic_baseline_location_on_24"
                     android:gravity="right"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/menucolor"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp"
                     android:text="اضغط للحصول علي الموقع"
+                    android:fontFamily="@font/homefont"
                     android:textSize="18dp" />
 
 
-                <TextView
-                    android:id="@+id/tv_showAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginRight="20dp"
-                    android:text="اظهار الكل "
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="15dp" />
-
-                <ImageView
-                    android:id="@+id/show_images"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="15dp"
-                    android:layout_marginTop="8dp"/>
 
 
 
@@ -166,7 +153,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginBottom="8dp"
                     android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:weightSum="3">
 
                     <RelativeLayout
                         android:id="@+id/liner_whats"
@@ -200,28 +187,10 @@
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_baseline_call_24" />
+                            app:srcCompat="@drawable/ic_baseline_call_24" />
 
                     </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:id="@+id/liner_page"
-
-                        android:background="@drawable/corner_btn_draw">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/baseline_facebook_24" />
-
-                    </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="0dp"
@@ -237,15 +206,27 @@
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_baseline_share_24" />
+                            app:srcCompat="@drawable/ic_baseline_share_24" />
 
                     </RelativeLayout>
                 </LinearLayout>
 
             </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
+        </ScrollView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1660693716077788/8134060213">
+
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
 </layout>

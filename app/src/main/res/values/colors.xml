@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#14A0DF</color>
-    <color name="colorPrimaryDark">#03A9F4</color>
+    <color name="colorPrimary">#A12D2E2C</color>
+    <color name="colorPrimaryDark">#A12D2E2C</color>
     <color name="colorAccent">#03A9F4</color>
     <color name="white">#fff</color>
     <color name="black">#000</color>
+    <color name="spelash">#ebebeb</color>
+
+    <color name="blacklighit">#27000000</color>
+    <color name="red">#FB0505</color>
+    <color name="menucolor">#654062</color>
+    <array name="array_dot_active">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+    </array>
+    <color name="menstextcolor">#AC5EA6</color>
 </resources>

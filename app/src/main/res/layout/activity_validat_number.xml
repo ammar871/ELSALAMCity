@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout"
+        tools:context=".auth.VerifyPhoneActivity">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="100dp"
+            android:text="انتظر من فضلك "
+            android:fontFamily="@font/homefont"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/menucolor" />
+
+
+            <RelativeLayout
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/inputCod1"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/menucolor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/inputCod2"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:layout_toRightOf="@id/inputCod1"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/menucolor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor" />
+
+            <EditText
+
+                android:id="@+id/inputCod3"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@id/inputCod2"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/menucolor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor" />
+
+            <EditText
+
+                android:id="@+id/inputCod4"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@id/inputCod3"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/menucolor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor" />
+
+                <EditText
+
+                    android:id="@+id/inputCod5"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/inputCod4"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/menucolor"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    tools:ignore="LabelFor" />
+
+            <EditText
+
+                android:id="@+id/inputCod6"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:layout_toRightOf="@id/inputCod5"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/menucolor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor" />
+
+        </RelativeLayout>
+           <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@id/cardView"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/corner_btn_draw">
+
+
+        <TextView
+            android:id="@+id/button_Sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/homefont"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:text="تأكيد "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25ssp"
+
+            android:textStyle="bold" />
+
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:theme="@style/AppTheme.WhiteAccent"
+            android:visibility="gone" />
+    </FrameLayout>
+        <TextView
+            android:id="@+id/tvRsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="أرسال الكود مرة أخرى  "
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/homefont"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/red" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+         android:layout_gravity="center"
+            >
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginTop="30dp"
+                android:text="كل المحلات  فى برديس علي تطبيق "
+                android:fontFamily="@font/homefont"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+                android:textColor="@color/menucolor" />
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/logo"
+                android:scaleType="fitXY"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/greenCheck"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                app:srcCompat="@drawable/ic_green_check" />
+
+            <TextView
+                android:id="@+id/txtSuccessMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/greenCheck"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:textColor="@color/menucolor"
+                android:fontFamily="@font/homefont"
+                android:text=" تم استلام طلبك سيتم التواصل معك "
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnGoBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSuccessMessage"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/draw_btn2"
+                android:padding="15dp"
+                android:text="عودة الي التسوق "
+                android:textColor="@color/menucolor"
+                android:fontFamily="@font/homefont"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

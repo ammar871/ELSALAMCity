@@ -7,7 +7,7 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".about_app.AboutActivity">
@@ -28,21 +28,23 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:fontFamily="@font/homefont"
                 android:text="عن التطبيق"
-                android:textColor="@color/black"
+
+                android:textColor="@color/menucolor"
                 android:textSize="18dp" />
 
             <ImageView
 
                 android:id="@+id/imagback"
-                android:padding="15dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/btn_design_back"
                 android:layout_centerVertical="true"
+                android:background="@drawable/btn_design_back"
+                android:padding="15dp"
 
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
             <View
                 android:layout_width="match_parent"
@@ -54,27 +56,157 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/tv_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/appbar"
+            android:layout_below="@id/appbar"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/homefont"
+
             android:gravity="center"
-            android:layout_marginTop="10dp"
             android:padding="10dp"
-            android:text="يمكنك التواصل معنا عن طريق الاتصال علي الهاتف او ارسال ايميل "
-            android:textColor="@color/black"
-            android:textSize="20dp"
+            android:text="يهدف هذا التطبيق لخدمة مواطني قرية برديس.. حيث تستطيع بضغطة زر الوصول لكافة الخدمات داخل المدينة. "
+            android:textColor="@color/menucolor"
+            android:textSize="25dp"
+            android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_marginBottom="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@color/white"
-            android:src="@drawable/logoonc"
             android:scaleType="fitXY"
-            android:elevation="20dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/liner_star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_design_back"
+                android:orientation="vertical"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.33"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/img_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_baseline_star_24" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_star"
+                    android:layout_gravity="center"
+
+                    android:fontFamily="@font/homefont"
+                    android:text="تقييم التطبيق"
+
+                    android:textColor="@color/menucolor"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/liner_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_design_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/liner_star"
+                app:layout_constraintWidth_percent="0.33">
+
+                <ImageView
+                    android:id="@+id/img_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_baseline_update_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_update"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/homefont"
+                    android:text="تحديث التطبيق"
+
+                    android:textColor="@color/menucolor"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:background="@drawable/btn_design_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/liner_update"
+                    app:layout_constraintWidth_percent="0.33"
+
+                    android:layout_margin="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+
+
+                    >
+
+                    <TextView
+                        android:id="@+id/laout_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                     android:drawableTop="@drawable/ic_baseline_ondemand_video_24"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/homefont"
+                        android:text="ادعمنـا"
+                        android:textColor="@color/menucolor"
+                        android:textSize="12dp" />
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_centerHorizontal="true"
+                        android:theme="@style/AppTheme.menclor"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+             <!--  -->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 </layout>
